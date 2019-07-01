@@ -43,35 +43,29 @@
 //                            VERSION 2
 //=====================================================================
 var x = process.argv[2]
+var y = process.argv[3]
+var z = process.argv[4]
 
 
-var friend = function(name, age,hometown) {
+
+var friend = function(name, age,town) {
         this.name = name;
         this. age = age;
-        this.hometown = hometown;
+        this.town = town;
         
         if(this.name === x) {
-            console.log(this.name)
+            console.log("you have the same name as " + this.name)
+        }
+        if(this.age === y) {
+            console.log("you have the same age as " + this.name)
+        }
+        if(this.town === z) {
+            console.log("you have the same hometown as " + this.name)
         }
 }
 
-var jessica = new friend("jessica", 30, "RC")
-var cassie = new friend("cassie", 30, "RC")
-var heather = new friend("heather", 30,"RC")
-
-console.log(jessica.age)
-console.log(cassie.age)
-
-
-
-// if (jessica.age === cassie.age) {
-//     console.log(jessica.name + " is the same age as " + cassie.name)
-// }
-
-// if (process.argv[3] === heather.hometown) {
-//     console.log(process.argv[2] + " is from the same town as " + heather.name)
-// }
- 
-//     console.log(this.name)
+var jessica = new friend("jessica", "30", "RC")
+var cassie = new friend("cassie", "30", "RC")
+var heather = new friend("heather", "30","RC")
 
 
